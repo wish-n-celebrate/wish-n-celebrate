@@ -6,109 +6,282 @@
           <meta name="google" value="notranslate"/>
           <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <link rel="stylesheet" href="SCSS/style.css">
+          <link rel="stylesheet" href="SCSS/style2.css">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>      
           <link rel="icon" href="https://wish-n-celebrate.github.io/IMAGES/icon.png" type="image/icon type"/>
           <script data-ad-client="ca-pub-6437237649620661" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0-rc.2/FileSaver.min.js" integrity="sha512-OC1HN+gJyPV7OoxfkbL2N4mP5JXWthtQgAf6zjQvE+jhHGWZNpSwzBVC30DxiX/iQts79gwx3LMizNdwOo6Okg==" crossorigin="anonymous"></script>
           <script type="text/javascript">
                document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%6b%69%74%2e%66%6f%6e%74%61%77%65%73%6f%6d%65%2e%63%6f%6d%2f%34%62%38%66%38%32%33%32%30%32%2e%6a%73%22%20%63%72%6f%73%73%6f%72%69%67%69%6e%3d%22%61%6e%6f%6e%79%6d%6f%75%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
           </script>
-          <title>Happy Holi</title>
+          <title>Happy Holi Wishes</title>
      </head>
      <body>
-          <nav class="navbar navbar-light bg-light">
+          <nav class="navbar navbar-dark fixed-top bg-dark">
                <div class="container-fluid">
-                 <span class="navbar-brand mb-0 h1">Navbar</span>
-                 <span></span>
+                 <span class="navbar-brand mb-0 h1">wishNcelebrate</span>
+                 <span><a href="https://wish-n-celebrate.github.io/hoil.html" class="btn btn-primary">Happy Holi</a></span>
                </div>
           </nav>
-          <div class="container row">
-               <div class="col-md-6 col-sm-12">
-                    Click on <span class="btn btn-primary">Download</span> to download the respective images...
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p" class="btn btn-primary">Download</p>
+          <div class="container-fluid row main w-100">
+               <div class="col-md-6 col-sm-12 row">
+                    <div class="card col-12">
+                         <p class="card-body">Click on <span class="btn btn-primary">Download <i class="fas fa-download"></i></span> to download the respective images...</p>
+                    </div>
+                    <div class="card col-12">
+                         <img id="i" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes.png" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload = document.getElementById('p');
+                              let img = document.getElementById('i');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload.addEventListener('click', () => {
+                                   let imagePath = img.getAttribute('src');
+                                   let fileName = getFileName(imagePath);
+                                   saveAs(imagePath, fileName);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
+                    </div>
+                    <div class="card col-12">
+                         <img id="i1" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes1.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p1" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload1 = document.getElementById('p1');
+                              let img1 = document.getElementById('i1');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload1.addEventListener('click', () => {
+                                   let imagePath1 = img1.getAttribute('src');
+                                   let fileName1 = getFileName(imagePath1);
+                                   saveAs(imagePath1, fileName1);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
+                    </div>
+                    <div class="card col-12">
+                         <img id="i2" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes2.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p2" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload2 = document.getElementById('p2');
+                              let img2 = document.getElementById('i2');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload2.addEventListener('click', () => {
+                                   let imagePath2 = img2.getAttribute('src');
+                                   let fileName2 = getFileName(imagePath2);
+                                   saveAs(imagePath2, fileName2);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
+                    </div>
+                    <div class="card col-12">
+                         <img id="i3" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes3.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p3" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload3 = document.getElementById('p3');
+                              let img3 = document.getElementById('i3');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload3.addEventListener('click', () => {
+                                   let imagePath3 = img3.getAttribute('src');
+                                   let fileName3 = getFileName(imagePath3);
+                                   saveAs(imagePath3, fileName3);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
+                    </div>
+                    <div class="card col-12">
+                         <img id="i4" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes4.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p4" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload4 = document.getElementById('p4');
+                              let img4 = document.getElementById('i4');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload4.addEventListener('click', () => {
+                                   let imagePath4 = img4.getAttribute('src');
+                                   let fileName4 = getFileName(imagePath4);
+                                   saveAs(imagePath4, fileName4);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
                </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i1" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p1" class="btn btn-primary">Download</p>
+               <div class="col-md-6 col-sm-12 row">
+                    <div class="card col-12">
+                         <img id="i5" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes5.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p5" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload5 = document.getElementById('p5');
+                              let img5 = document.getElementById('i5');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload5.addEventListener('click', () => {
+                                   let imagePath5 = img5.getAttribute('src');
+                                   let fileName5 = getFileName(imagePath5);
+                                   saveAs(imagePath5, fileName5);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i2" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p2" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <img id="i6" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes6.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p6" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload6 = document.getElementById('p6');
+                              let img6 = document.getElementById('i6');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload6.addEventListener('click', () => {
+                                   let imagePath6 = img6.getAttribute('src');
+                                   let fileName6 = getFileName(imagePath6);
+                                   saveAs(imagePath6, fileName6);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i3" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p3" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <img id="i7" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes7.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p7" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload7 = document.getElementById('p7');
+                              let img7 = document.getElementById('i7');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload7.addEventListener('click', () => {
+                                   let imagePath7 = img7.getAttribute('src');
+                                   let fileName7 = getFileName(imagePath7);
+                                   saveAs(imagePath7, fileName7);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i4" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p4" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <img id="i8" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes8.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p8" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload8 = document.getElementById('p8');
+                              let img8 = document.getElementById('i8');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload8.addEventListener('click', () => {
+                                   let imagePath8 = img8.getAttribute('src');
+                                   let fileName8 = getFileName(imagePath8);
+                                   saveAs(imagePath8, fileName8);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i5" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes5.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p5" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <img id="i9" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes9.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p9" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload9 = document.getElementById('p9');
+                              let img9 = document.getElementById('i9');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload9.addEventListener('click', () => {
+                                   let imagePath9 = img9.getAttribute('src');
+                                   let fileName9 = getFileName(imagePath9);
+                                   saveAs(imagePath9, fileName9);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i6" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes6.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p6" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <img id="i10" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes10.jpg" class="card-img-top"/>
+                         <div class="card-body">
+                              <p id="p10" class="btn btn-primary">Download <i class="fas fa-download"></i></p>
+                         </div>
+                         <script type="text/javascript">
+               
+                              let btnDownload10 = document.getElementById('p10');
+                              let img10 = document.getElementById('i10');
+                              
+                              // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
+                              btnDownload10.addEventListener('click', () => {
+                                   let imagePath10 = img10.getAttribute('src');
+                                   let fileName10 = getFileName(imagePath10);
+                                   saveAs(imagePath10, fileName10);
+                              });
+                              
+                              function getFileName(str) {
+                                   return str.substring(str.lastIndexOf('/') + 1)
+                              }
+                         </script>
                     </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i7" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes7.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p7" class="btn btn-primary">Download</p>
-                    </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i8" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes8.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p8" class="btn btn-primary">Download</p>
-                    </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i9" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes9.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p9" class="btn btn-primary">Download</p>
-                    </div>
-               </div>
-               <div class="card col-md-6 col-sm-12">
-                    <img id="i10" src="https://wish-n-celebrate.github.io/IMAGES/holi-wishes10.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                         <p id="p10" class="btn btn-primary">Download</p>
+                    <div class="card col-12">
+                         <p class="card-body">More will be <span class="btn btn-primary">Coming Soon</span> !!!</p>
                     </div>
                </div>
           </div>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0-rc.2/FileSaver.min.js" integrity="sha512-OC1HN+gJyPV7OoxfkbL2N4mP5JXWthtQgAf6zjQvE+jhHGWZNpSwzBVC30DxiX/iQts79gwx3LMizNdwOo6Okg==" crossorigin="anonymous"></script>
-          <script type="text/javascript">
-
-               let img = document.querySelector('img');
-               
-               // Must use FileSaver.js 2.0.2 because 2.0.3 has issues.
-               img.addEventListener('click', () => {
-                    let imagePath = img.getAttribute('src');
-                    let fileName = getFileName(imagePath);
-                    saveAs(imagePath, fileName);
-               });
-               
-               function getFileName(str) {
-                    return str.substring(str.lastIndexOf('/') + 1)
-               }   
-          </script>
+          <nav class="navbar navbar-dark sticky-bottom bg-dark">
+               <div class="container-fluid">
+                 <span><p class="btn btn-primary">By, Ashish Chandra</p></span>
+                 <span class="navbar-brand mb-0 h1">wishNcelebrate</span>
+               </div>
+          </nav>
      </body>
 </html>

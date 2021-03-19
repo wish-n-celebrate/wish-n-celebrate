@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background-color: #3a3a3a;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 62.5%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body nav.fixed-top {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 0.2rem solid #dcdcdc;
+}
+
+body nav.sticky-bottom {
+  width: 100%;
+  height: 4rem;
+  border-top: 0.2rem solid #dcdcdc;
+}
+
+body .main {
+  height: auto;
+  padding-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3a3a3a;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .main .row .card {
+  height: auto;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #dcdcdc;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #212529;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+body .main .row .card img {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #3a3a3a;
+}
+
+body .main .row .card p {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #0c56c4;
+}
+/*# sourceMappingURL=style2.css.map */
