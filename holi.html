@@ -836,6 +836,16 @@
           return str.substring(str.lastIndexOf('/') + 1)
           }
 
+          function la(){
+               document.getElementById("iu").style.display="none";
+               document.getElementById("share").style.borderRadius="0";
+               document.getElementById("share").style.paddingTop="4rem";
+               document.getElementById("share").style.overflowY="scroll";
+               document.getElementById("share").style.height="100%";
+               document.getElementById("share").style.width="100%";
+               document.getElementById("acl").style.display="block";
+          }
+
           // Set the date we're counting down to
           var countDownDate = new Date("Mar 29, 2021 00:00:00").getTime();
 
