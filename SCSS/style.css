@@ -263,7 +263,7 @@ body #logo {
   position: fixed;
   display: block;
   z-index: 999;
-  width: 12.5rem;
+  width: 22.5rem;
   background-color: #646464;
   height: 3rem;
   top: 1rem;
@@ -926,6 +926,7 @@ body #form button {
   width: 15vw;
   background-color: #004646;
   border: 0.2rem solid cyan;
+  outline: none;
   color: cyan;
   cursor: pointer;
   border-radius: 0 1.5rem 1.5rem 0;
@@ -1036,19 +1037,20 @@ body #share button i {
   cursor: pointer;
 }
 
-body #share a {
+body #share #acl {
   text-align: center;
   text-decoration: none;
+  display: none;
+  cursor: pointer;
 }
 
-body #share a img {
+body #share #acl img {
   width: 75vw;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  display: none;
 }
 
-body #share a p {
+body #share #acl p {
   color: black;
   width: 100%;
   text-align: center;
@@ -1057,6 +1059,5 @@ body #share a p {
   transition: 0.5s ease-in-out;
   font-family: 'Tillana', cursive;
   font-size: 1rem;
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */
