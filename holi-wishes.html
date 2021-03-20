@@ -19,10 +19,38 @@
      <body>
           <nav class="navbar navbar-dark fixed-top bg-dark">
                <div class="container-fluid">
-                 <span class="navbar-brand mb-0 h1">wishNcelebrate</span>
-                 <span><a href="https://wish-n-celebrate.github.io/hoil.html" class="btn btn-primary">Happy Holi</a></span>
+                    <span class="navbar-brand mb-0 h1">wishNcelebrate</span>
+                    <span>
+                         <button class="btn btn-primary" type="button">
+                              <i class="fas fa-times" id="bi" onclick="men()"></i>
+                              <i class="fas fa-bars" id="bix" onclick="menx()"></i>
+                         </button>
+                    </span>
                </div>
           </nav>
+          <ul class="card" id="menu">
+               <li class="nav-item">
+                    <a class="nav-link" href="https://wish-n-celebrate.github.io.html">Home</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="https://wish-n-celebrate.github.io/holi.html">Happy Holi</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://wish-n-celebrate.github.io/holi-wishes.html" active>Happy Holi Wishes(Images)</a>
+               </li>
+          </ul>
+          <script type="text/javascript">
+               function men(){
+                    document.getElementById("bi").style.display="none";
+                    document.getElementById("bix").style.display="block";
+                    document.getElementById("menu").style.top="-12rem";
+               }
+               function menx(){
+                    document.getElementById("bix").style.display="none";
+                    document.getElementById("bi").style.display="block";
+                    document.getElementById("menu").style.top="0";
+               }
+          </script>
           <div class="container-fluid row main w-100">
                <div class="col-md-6 col-sm-12 row">
                     <div class="card col-12">
@@ -280,7 +308,7 @@
           <nav class="navbar navbar-dark sticky-bottom bg-dark">
                <div class="container-fluid">
                  <span><p class="btn btn-primary">By, Ashish Chandra</p></span>
-                 <span class="navbar-brand mb-0 h1">wishNcelebrate</span>
+                 <span class="navbar-brand mb-0">wishNcelebrate</span>
                </div>
           </nav>
      </body>

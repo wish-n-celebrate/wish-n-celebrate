@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@900&family=Roboto+Slab&family=Tillana:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Fascinate+Inline&family=Kumar+One+Outline&family=Luckiest+Guy&family=Montserrat:wght@900&family=Roboto+Slab&family=Tillana:wght@600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -234,8 +234,7 @@ h2 span:last-child {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  80%,
-  100% {
+  80%, 100% {
     -webkit-transform: scale(1) rotateZ(-3deg);
             transform: scale(1) rotateZ(-3deg);
   }
@@ -246,8 +245,7 @@ h2 span:last-child {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  80%,
-  100% {
+  80%, 100% {
     -webkit-transform: scale(1) rotateZ(-3deg);
             transform: scale(1) rotateZ(-3deg);
   }
@@ -255,13 +253,21 @@ h2 span:last-child {
 
 body {
   font-size: 62.5%;
-  max-width: 800px;
+  width: 100vh;
   background-color: rgba(255, 251, 0, 0.24);
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body #logo {
   position: fixed;
   display: block;
+  cursor: pointer;
   z-index: 999;
   width: 22.5rem;
   background-color: #646464;
@@ -276,13 +282,14 @@ body #logo {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: 'Fascinate Inline', cursive;
   border-radius: 2.5rem;
   -webkit-box-shadow: 0.2rem 0.2rem 0.5rem #000000;
           box-shadow: 0.2rem 0.2rem 0.5rem #000000;
 }
 
 body #logo .text-copy {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fascinate Inline', cursive;
   fill: none;
   color: #be3397;
   text-shadow: 0.1rem 0.1rem #c00050;
@@ -377,19 +384,15 @@ body #logo .text-copy:nth-child(16) {
     color: #be3397;
     text-shadow: 0.1rem 0.1rem #c00050;
   }
-  20% {
-    color: #c00050;
+  25% {
+    color: #d40059;
     text-shadow: 0.1rem 0.1rem #eb0042;
   }
-  40% {
-    color: #eb0042;
-    text-shadow: 0.1rem 0.1rem #dd003f;
-  }
-  60% {
-    color: #dd003f;
+  50% {
+    color: #ee0043;
     text-shadow: 0.1rem 0.1rem #fdb731;
   }
-  80% {
+  75% {
     color: #fdb731;
     text-shadow: 0.1rem 0.1rem #be3397;
   }
@@ -404,19 +407,15 @@ body #logo .text-copy:nth-child(16) {
     color: #be3397;
     text-shadow: 0.1rem 0.1rem #c00050;
   }
-  20% {
-    color: #c00050;
+  25% {
+    color: #d40059;
     text-shadow: 0.1rem 0.1rem #eb0042;
   }
-  40% {
-    color: #eb0042;
-    text-shadow: 0.1rem 0.1rem #dd003f;
-  }
-  60% {
-    color: #dd003f;
+  50% {
+    color: #ee0043;
     text-shadow: 0.1rem 0.1rem #fdb731;
   }
-  80% {
+  75% {
     color: #fdb731;
     text-shadow: 0.1rem 0.1rem #be3397;
   }
@@ -424,6 +423,66 @@ body #logo .text-copy:nth-child(16) {
     color: #be3397;
     text-shadow: 0.1rem 0.1rem #c00050;
   }
+}
+
+body ul.card#menu {
+  position: fixed;
+  z-index: 997;
+  display: none;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 50%;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #dcdcdc;
+  padding: 5rem 0 1rem 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body ul.card#menu::-webkit-scrollbar {
+  display: none;
+}
+
+body ul.card#menu li {
+  list-style: none;
+  text-align: right;
+  width: 100%;
+}
+
+body ul.card#menu li a {
+  text-decoration: none;
+  color: #212529;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  border-top: 0.1rem solid #212529;
+  border-bottom: 0.1rem solid #212529;
+}
+
+body ul.card#menu li a.active, body ul.card#menu li a:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-top: 0.2rem solid #0c56c4;
+  border-bottom: 0.2rem solid #0c56c4;
+}
+
+body p.btn.btn.btn-danger#bix {
+  position: fixed;
+  z-index: 998;
+  width: 0;
+  left: 50%;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  display: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 1rem;
 }
 
 body marquee {
@@ -471,7 +530,7 @@ body #b4 {
   right: 0;
 }
 
-body #main {
+body #main, body #Ashish {
   height: 100vh;
   width: 75vw;
   z-index: 1;
@@ -481,23 +540,23 @@ body #main {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background-color: firebrick;
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: firebrick;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-body #main::-webkit-scrollbar {
+body #main::-webkit-scrollbar, body #Ashish::-webkit-scrollbar {
   display: none;
 }
 
-body #main img {
+body #main img, body #Ashish img {
   position: relative;
   margin-top: 1rem;
 }
 
-body #main #is1 {
+body #main #is1, body #Ashish #is1 {
   height: 170vw;
   margin-top: -3rem;
   padding-top: 0;
@@ -508,12 +567,12 @@ body #main #is1 {
 }
 
 @media (max-width: 550px) {
-  body #main #is1 {
+  body #main #is1, body #Ashish #is1 {
     height: 200vw;
   }
 }
 
-body #main #is1 h2 {
+body #main #is1 h2, body #Ashish #is1 h2 {
   -webkit-transform: center rotateY(30deg);
           transform: center rotateY(30deg);
   -webkit-animation: 1s imgie ease-in-out infinite;
@@ -550,11 +609,11 @@ body #main #is1 h2 {
   }
 }
 
-body #main #is2 {
+body #main #is2, body #Ashish #is2 {
   height: 40vw;
 }
 
-body #main #h3 {
+body #main #h3, body #Ashish #h3 {
   text-align: center;
   margin: 0;
   width: 100%;
@@ -598,7 +657,7 @@ body #main #h3 {
   }
 }
 
-body #main #h4 {
+body #main #h4, body #Ashish #h4 {
   text-align: center;
   margin: 0;
   width: 100%;
@@ -642,7 +701,7 @@ body #main #h4 {
   }
 }
 
-body #main #i2 {
+body #main #i2, body #Ashish #i2 {
   width: 50vw;
   margin-bottom: 1.5rem;
   -webkit-transform: center rotate(5deg);
@@ -681,7 +740,7 @@ body #main #i2 {
   }
 }
 
-body #main #i1 {
+body #main #i1, body #Ashish #i1 {
   width: 50vw;
   -webkit-transform: center rotate(5deg);
           transform: center rotate(5deg);
@@ -719,7 +778,7 @@ body #main #i1 {
   }
 }
 
-body #main #i3 {
+body #main #i3, body #Ashish #i3 {
   margin-top: 1.5rem;
   width: 50vw;
   margin-left: 12.5vw;
@@ -751,12 +810,12 @@ body #main #i3 {
   }
 }
 
-body #main #cl {
+body #main #cl, body #Ashish #cl {
   position: relative;
   width: 75vw;
 }
 
-body #main #i4 {
+body #main #i4, body #Ashish #i4 {
   width: 90vw;
   height: 80vw;
   right: 0;
@@ -799,7 +858,7 @@ body #main #i4 {
   }
 }
 
-body #main #i6 {
+body #main #i6, body #Ashish #i6 {
   width: 60vw;
   margin-top: 11rem;
   -webkit-transform-origin: center;
@@ -811,7 +870,7 @@ body #main #i6 {
 }
 
 @media (max-width: 550px) {
-  body #main #i6 {
+  body #main #i6, body #Ashish #i6 {
     margin-top: 7rem;
   }
 }
@@ -846,7 +905,7 @@ body #main #i6 {
   }
 }
 
-body #main #f {
+body #main #f, body #Ashish #f {
   text-align: center;
   margin: 2rem 0 0 0;
   width: 100%;
@@ -888,6 +947,10 @@ body #main #f {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
+}
+
+body #Ashish {
+  top: 100vh;
 }
 
 body #form {
@@ -970,6 +1033,7 @@ body #share ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1038,26 +1102,25 @@ body #share button i {
 }
 
 body #share #acl {
-  text-align: center;
-  text-decoration: none;
+  height: auto;
   display: none;
-  cursor: pointer;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #dcdcdc;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #212529;
 }
 
 body #share #acl img {
-  width: 75vw;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #3a3a3a;
 }
 
-body #share #acl p {
-  color: black;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  font-family: 'Tillana', cursive;
-  font-size: 1rem;
+body #share #acl .btn.btn-primary {
+  border-radius: 0.2rem;
+  border: 0.1rem solid #0c56c4;
+}
+
+body #share #acl span#p {
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
