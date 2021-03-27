@@ -7,7 +7,7 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <link rel="stylesheet" href="SCSS/style.css">
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>      
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>     
           <link rel="icon" href="https://wish-n-celebrate.github.io/IMAGES/icon.png" type="image/icon type"/>
           <script data-ad-client="ca-pub-6437237649620661" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0-rc.2/FileSaver.min.js" integrity="sha512-OC1HN+gJyPV7OoxfkbL2N4mP5JXWthtQgAf6zjQvE+jhHGWZNpSwzBVC30DxiX/iQts79gwx3LMizNdwOo6Okg==" crossorigin="anonymous"></script>
@@ -50,6 +50,44 @@
                     document.getElementById("bi").style.display="block";
                     document.getElementById("menu").style.top="0";
                }
+          </script>
+          <div id="share">
+               <i class="fas fa-arrow-circle-right"  data-bs-toggle="tooltip" data-bs-placement="right" title="Share"></i>
+               <a href="whatsapp://send?text=" data-action="share/whatsapp/share" data-bs-toggle="tooltip" data-bs-placement="right" title="Share via whatsapp"><img src="https://wish-n-celebrate.github.io/IMAGES/what.png"/></a>
+               <a href="https://telegram.me/share/url?url=&text=" data-bs-toggle="tooltip" data-bs-placement="right" title="Share via telegram"><img src="https://wish-n-celebrate.github.io/IMAGES/tele.png"/></a>
+               <a href="https://www.facebook.com/sharer.php?u=" target="_blank" data-bs-toggle="tooltip" data-bs-placement="right" title="Share via facebook"><img src="https://wish-n-celebrate.github.io/IMAGES/fb.png"/></a>
+               <a href="https://twitter.com/intent/tweet?text=" target="_blank" data-bs-toggle="tooltip" data-bs-placement="right" title="Share via twitter"><img src="https://wish-n-celebrate.github.io/IMAGES/tweet.png"/></a>
+          </div>
+          <div class="head w-100">
+               <section class="title">
+                    <div id="img" class="w-100"></div>
+                    <h1 id="title">wish<span>N</span>celebrate</h1><br/>
+                    <span class="SkewedOne"></span>
+                    <span class="SkewedTwo"></span>
+               </section>
+               <section class="body">
+                    <span class="btn btn-primary">English</span>
+                    <span class="btn btn-outline-primary">Hindi</span>
+                    <hr>
+                    <span id="eng">     As you all know and as the name suggests, we are here to help you in being healthy in your relationship with your friends and relatives. We provide you wishing websites with great quotes to share on WhatsApp, Facebook, and other social media services. We also provide you beautiful wishing images of different festivals. Adds on we only want to make you happy and celebrate your life. Hence, we are named wishNcelebrate...</span>
+                    <span id="hindi">   जैसा कि आप सभी जानते हैं और जैसा कि नाम से पता चलता है, हम यहां आपके दोस्तों और रिश्तेदारों के साथ आपके रिश्ते में स्वस्थ होने में आपकी मदद करने के लिए हैं। हम आपको व्हाट्सएप, फेसबुक और अन्य सोशल मीडिया सेवाओं पर साझा करने के लिए शानदार उद्धरण के साथ वेबसाइट प्रदान करते हैं। हम आपको अलग-अलग त्योहारों की सुंदर शुभकामनाएं भी प्रदान करते हैं। अंततः  हम केवल आपको खुश करना चाहते हैं और अपने जीवन का जश्न मनाते हैं। इसलिए, हमें wishNcelebrate दिया गया है ...</span>
+               </section>
+               
+          </div>
+          <script>
+               const SkewedOne = document.querySelector('.SkewedOne');
+               const SkewedTwo = document.querySelector('.SkewedTwo');
+               window.addEventListener('scroll', function(){
+                    const value1 = -15 + window.scrollY/45;
+                    const value2 = 15 + window.scrollY/-45;
+                    SkewedOne.style.tranform = "skewY(" + value1 + "deg)";
+                    SkewedTwo.style.tranform = "skewY(" + value2 + "deg)";
+               })
+
+               var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+               var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+               })
           </script>
           <nav class="navbar navbar-dark sticky-bottom bg-dark">
                <div class="container-fluid">

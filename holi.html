@@ -851,9 +851,9 @@
                     और होली की<br/>
                     खूब सारी बधाई
                </h2>
-               <h2 id="timer">
+               <h2 id="timer1">
                     In
-                    <p id="demo"></p>
+                    <p id="demo1"></p>
                     Advance
                </h2>
                <img id="i1" src="https://wish-n-celebrate.github.io/IMAGES/holi.gif"/>
@@ -954,11 +954,14 @@
           // Output the result in an element with id="demo"
           document.getElementById("demo").innerHTML = days + "d " + hours + "h "
           + minutes + "m " + seconds + "s ";
+          document.getElementById("demo1").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
           
           // If the count down is over, write some text 
           if (distance == 0) {
           clearInterval(x);
           document.getElementById("timer").style.display = "none";
+          document.getElementById("timer1").style.display = "none";
           }
           }, 1000);
 
